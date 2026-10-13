@@ -3,10 +3,12 @@ from pyscript import document
 # Jan Cabading
 # Reused SW1 CODE
 
+#list of current members
 g7 = {'Lamelo Ball'}
 g8 = {'Lebron James'}
 g9 = {'Miku Martineau'}
 g10 = {'Jan Cabading', 'Jacob Minguillo'}
+
 
 def get_member(e):
     # get values from input fields
