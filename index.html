@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SW1</title>
+    <title>Campus Club Member Management</title>
 
-    <!-- python -->
-    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css"/>
-    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <!-- PyScript CSS & JS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
 
-    <!-- bootstrap-->
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
 
     <style>
-      /* note: all colors i input were recommended by gemini*/
+      /* note: all colors i input were recommended by gemini */
       body {
         background-color: #0f172a;
         color: #fff;
@@ -36,19 +36,25 @@
         color: #0f172a;
       }
 
-      .tech-input{
+      .tech-input {
         background-color: #0f172a;
         border: 1px solid #475569;
-        color: #fff
+        color: #fff;
+      }
+
+      /* White text styling for text typed in inputs */
+      .tech-input:focus {
+        background-color: #0f172a;
+        color: #fff;
       }
     </style>
 </head>
-<!-- centers the container in the very center hoirzontally and vertically -->
+<!-- centers the container in the very center horizontally and vertically -->
 <body class="d-flex align-items-center justify-content-center p-3">
 
 <!-- upper part of the container -->
     <div class="tech-container p-4 text-center">
-        <h3 class="fw-bold mb-1 text-info">COCC CLUB ADDER</h3>
+        <h3 class="fw-bold mb-3 text-info">COCC CLUB ADDER</h3>
 
 <!-- first name input field -->
         <div class="text-start mb-3">
@@ -59,16 +65,17 @@
 <!-- last name input field -->
         <div class="text-start mb-4">
             <label for="SURNAME" class="form-label small text-light">Last Name</label>
-            <input type="text" id="SURNAME" class="form-control tech-input" placeholder="e.g. Cabaddie">
+            <input type="text" id="SURNAME" class="form-control tech-input" placeholder="e.g. Cabading">
         </div>
         
 <!-- button that executes the python function in main.py via py-click -->
-        <button py-click="check_member" class="btn btn-tech w-100 py-2 mb-3">ADD MEMBER</button>
+        <button py-click="get_member" class="btn btn-tech w-100 py-2 mb-3 fw-bold">ADD MEMBER</button>
         
-<!-- the output, like the one that executes the python functiion -->
-        <div id="result" class="fw-bold fs-6 text-info"></div>
+<!-- the output container for displaying club total and member list -->
+        <div id="result" class="text-start mt-3"></div>
     </div>
 
+    <!-- Script tag connecting to main.py -->
     <script type="py" src="main.py"></script>
 </body>
 </html>
