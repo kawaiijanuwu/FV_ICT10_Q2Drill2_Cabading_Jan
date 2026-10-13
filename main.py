@@ -19,20 +19,16 @@ def get_member(e):
     new_member = {fullname}
 
     members = g7 | g8| g9 | g10
-    full_list = {new_member | members}
-
-    members_list = "".join(full_list)
+    full_list = new_member | members
+    members_list = "<br>".join(full_list)
     total_count = len(full_list)
 
-    # Format the final result using f-string
-    result = 
-    f"""
-    <h3>Club Roster</h3>
-    <p>Total Members:{total_count}</p>
-    <p>Member List:{members_list}</p> 
+    # format using f-string
+    result = f"""
+    <h3>Club Roster</h3> 
+    <h4>Total Members: {total_count}</h4>
+    {members_list}  
     """
 
     # Display result in HTML element
     document.getElementById("result").innerHTML = result
-
-    
